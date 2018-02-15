@@ -1,0 +1,308 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    font-family: akrobat;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     
+  }
+body{
+    height: 100vh; 
+    position: relative;  
+    background: linear-gradient(to right, #e9f0f5 80%, #FFFFFF 20%); 
+    overflow: hidden;
+}
+body>header{
+    width: 100%;
+    height: 60px;
+    background: url("../img/Logo3.png") -80px -50px #2c3e50 no-repeat;
+    background-size: 215px;
+    position: fixed;
+    z-index:1001;
+}
+h1, h2, h3, h4, h5{
+    color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+header>h5 a{
+    font-family: coolveticaregular;
+    color: #FFF;
+}
+header>h5{
+    text-align: left;
+    padding-left: 145px;
+    padding-top: 13px;
+    font-family: coolvetica;
+    position: fixed;
+}
+ #profileStatsNav, #statsFixedNav{
+    z-index: 1000;
+}
+
+#userBadgesNav, #driverScoreNav{
+    z-index: 1002;
+}
+/*--------------------------
+    LEFT FIXED NAV BAR
+-----------------------------*/
+
+ul#statsFixedNav li{
+    padding: 20px 0;
+}
+ul#statsFixedNav{
+    padding-top: 80px;
+}
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #fff;
+    color: #666;
+    text-align: center;
+    font: 12px bebasneue; 
+}
+.numberCircle-lg {
+    border-radius: 70%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+
+    background: #fff;
+    color: #666;
+    text-align: center;
+
+    font: 12px bebasneue;
+    margin: 0 20px;   
+}
+#profileDisplayImage {
+    border: 3px solid #808080;
+    background: #808080;
+    display: block;
+    padding: 3px 0 0 0!important;
+}
+#profileDriverScore {
+    border: 3px solid #f8c772;
+    background: transparent;
+}
+#profileGoodScore {
+    border: 3px solid #1a65f1;
+    background: transparent;
+}
+#profileBadScore {
+    border: 3px solid #fd3838;
+    background: transparent;
+}
+
+
+/*---------------------
+    PROFILE STATS NAV
+----------------------*/
+.statsFixedNav{
+    width: 70px !important;
+}
+
+.driverScoreNav{
+    width: 590px !important;
+}
+
+.userBadgesNav{
+    width: 590px !important;
+}
+
+ul#profileStatsNav{
+    background-color:#34495e;
+    z-index: 99998;
+}
+#profileStatDP{
+    margin-top:65px;
+    width: 150px!important;
+    height:150px!important;
+}
+#statsNavUsername{
+    text-align: center;
+    font-family: bebasneue;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+#statsNavLicensePlate{
+    text-align: center;
+    font-family: bebasneue;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.statsDriverScore{
+    color:white;
+    font-size: 20px;
+}
+#statsBars{
+    display:block;
+    text-align: center;
+}
+div#statsBars div{
+    display:inline-block;
+}
+.statsLabels{
+    display:block;
+    color: white;
+    text-align:center;
+    font-family: akrobatregular;
+    font-size: 10px;
+    margin-left: 11px;
+}
+.see{
+    float:right;
+    padding: 0 20px 0 0;
+}
+div.statsLabels div{
+    text-align:center;
+    display:inline-block;
+    margin: 0 16px;
+}
+
+/*--------------------------------------
+    DRIVER SCORE AND BADGE STATS NAV
+----------------------------------------*/
+#driverScoreNav, #userBadgesNav{
+    background-color: #527699;
+    padding: 0 0 0 300px;
+    text-align: center;
+    color: #fff;
+}
+
+#driverScoreNav li h5,
+#userBadgesNav li h5{
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+#driverScoreNav #profileGoodScore, 
+#driverScoreNav #profileBadScore{
+    margin: 0 auto!important;
+}
+
+.numberCircle-DS {
+    border-radius: 70%;
+    behavior: url(PIE.htc);
+    width: 150px;
+    height: 150px;
+    padding: 40px 0;
+    background: #fff;
+    color: #fff;
+    text-align: center;
+    font-family:bebasneue;
+    font-size: 30px;
+    margin: 35px auto;
+}
+#profileDriverScore-DS {
+    border: 12px solid #f8c772;
+    background: transparent;
+}
+.dsnavtext{
+    font-size: 17px;
+    height: 2.5rem;
+}
+.dsnavbar{
+    margin: 13px 0;
+}
+
+label{
+    font-size: 1.2rem!important;
+    color: #FFF!important;
+}
+#badgeName{
+    margin: 20px 0 0 0;
+    height: 2.5rem;
+}
+
+#userBadgesNav hr{
+    width: 130px;
+    color: #fff;
+}
+/*-------------------------------------------
+   END OF DRIVER SCORE AND BADGE STATS NAV
+--------------------------------------------*/
+
+/*---------------------
+    Reporting Section
+----------------------*/
+.mainContent{
+    width: 80%;
+    position: relative;
+    height: 100vh;
+}
+.reportingSection{
+    padding: 90px;
+    width: 80%;
+    overflow: auto;
+    margin: 0;
+}
+#licensePlateText{
+    font-family: akrobat extrabold;
+    color: #404040;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.LicensePlateInput{
+    width:100%;
+}
+.LicensePlateInput .input-field{
+    margin-top: .5rem!important;
+}
+.right{
+    width: 60%!important;
+}
+
+.rightContent{
+   overflow: auto;
+}
+#reportVehicleButton
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/********************************************************************************
+   BLADE - REPORT FIELD
+********************************************************************************/
+li#bladeInputFieldContainer{
+    margin-top: 20px;
+    z-index: 1004;
+}
+div#bladeInputField{
+    width: 80%;
+}
+
+#inputReportLicense{
+    text-transform: uppercase!important;
+    font-size: 30px;
+    padding-top: 10px
+}
+
+ul li div.subheader{
+    padding: 0 0 0 17px;
+}
+
+#goodDriverText{
+    color:#02a0ff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#badDriverText{
+    color:#f43e3e;
+    font-weight: 600;
+    font-size: 17px;
+}
+.reportSideNav{
+    z-index: 1004!important;
+}
+/********************************************************************************
+   END OF BLADE - REPORT FIELD
+********************************************************************************/

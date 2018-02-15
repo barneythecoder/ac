@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+        <link rel="stylesheet" href="./css/winner.css">
+        <link href="./css/fonts.css" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+        <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            /* label color */
+            .input-field label {
+                color: rgb(66, 66, 66);
+            }
+            /* label focus color */
+            .input-field input[type=text]:focus + label {
+                color: #ffa000 !important;
+            }
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #ffa000 !important;
+                box-shadow: 0 1px 0 0 #ffa000 !important;
+            }
+            /* valid color */
+            .input-field input[type=text].valid {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+            /* invalid color */
+            .input-field input[type=text].invalid {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+            /* icon prefix focus color */
+            .input-field .prefix.active {
+                color: #000;
+            }
+
+            /* label focus color for Password field*/
+            .input-field input[type=password]:focus + label {
+                color: #ffa000 !important;
+            }
+            /* label underline focus color for PW field */
+            .input-field input[type=password]:focus {
+                border-bottom: 1px solid #ffa000 !important;
+                box-shadow: 0 1px 0 0 #ffa000 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h5><a href="index.html">AutoConscience</a></h5> 
+        </header>>
+       
+        <div id="repBtn">
+            <a data-activates="slide-out" id="reportVehicleButton" class="button-collapse pulse waves-effect waves-light btn-large btn-floating" ><i class="large material-icons">directions_car</i></a>
+            <!-- Tap Target Structure -->
+            <div class="tap-target" data-activates="reportVehicleButton">
+              <div class="tap-target-content">
+                <h5>Report a Vehicle</h5>
+                <p>Click this button anytime to report drivers on the road!</p>
+              </div>
+            </div>
+        </div>      
+
+        <ul id="slide-out" class="side-nav left-align">  
+            <li id="bladeInputFieldContainer">
+                <div class="input-field" id="bladeInputField">
+                    <input type ="text" id="inputReportLicense">
+                    <label for="inputReportLicense">Enter License Plate</label>
+                </div>
+            </li>
+            <li><div class="subheader" id="goodDriverText">For Good Driving</div></li>
+            <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Used Turn Signal</a></li>
+            <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Allowed Lane Merge</a></li>
+            <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Respected Right of Way</a></li>
+            <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Patient Driver</a></li>
+            <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Nice Car</a></li>
+
+            <li><div class="subheader" id="badDriverText">For Bad Driving</div></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect slideout2btn" href="#!">Did not Signal</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lacks Driving IQ</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lane Hogging</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Illegal/Wrong Parking</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Improper Pick-up/Drop-off</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Blocked Intersection</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Smoke Belching</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Counterflow</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Ran a Red Light</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Slow in a Fast Lane</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Horn and Light Abuse</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Dangerous Driver</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Refused Passenger</a></li>
+            <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Charged Wrong Fare</a></li>
+        </ul>
+            <!-- <div class="hex"></div> -->
+<!--PROFILE PICTURE HEXAGON-->
+            
+        <section class="winnerPage center-align">
+            
+                <div class="banner"></div>
+            <img src="./img/HoF.png" style="margin: 25px auto;">
+            <div class="banner"></div>
+
+            <div class="hexagon hexagon2 responsive-img ">
+                <div class="hexagon-in1 ">
+                    <div class="hexagon-in2">
+
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="./img/DP.png" class="" style="width: 15%;"> -->
+            <h3 class="itim">Congratulations, <span class="winnerPageLicensePlate">AOA 327</span></h3>
+            <h4 class="itim">You are <span>January's</span> Best Driver!</h4>
+            <p class="winText">
+                We are looking for the best of the best, the crème de la crème, the top of the heap! Get rewarded for your good driving behaviour. 
+            </p>
+            <p>
+                AutoConscience will give away rewards such as free gas or more for drivers who receive the most reports about their good driving. That could be for giving way, signaling as they make a turn, or just plain, old responsible and respectful driving.
+            </p>
+            <p>
+                If you are the driver of <span class="winnerPageLicensePlate">AOA 327</span>, contact us to receive your reward! 
+            </p>
+            <p>
+                Spread the word and help us reward <span class="winnerPageLicensePlate">AOA 327</span>! 
+                AutoConscience will also reward you for finding the monthly winner!
+            </p>
+            <div class="banner"></div>
+        </section>
+  
+      
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./js/slick.js"></script>
+        <script type="text/javascript" src="./js/materialize.min.js"></script>
+        <script type="text/javascript" src="./js/azure-mobile-apps-client.2.0.1.min.js"></script>
+        <script type="text/javascript" src="./js/businessPage.js"></script>
+
+    </body>
+</html>

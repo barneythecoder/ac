@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+        <link rel="stylesheet" href="./css/index.css">
+        <link href="./css/fonts.css" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+        <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+           /* label color */
+           .input-field label {
+            color: rgb(66, 66, 66);
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #ffa000 !important;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #ffa000 !important;
+            box-shadow: 0 1px 0 0 #ffa000 !important;
+        }
+        /* label focus color */
+        .input-field input[type=email]:focus + label {
+        color: #ffa000 !important;
+        }
+        /* label underline focus color */
+        .input-field input[type=email]:focus {
+            border-bottom: 1px solid #ffa000 !important;
+            box-shadow: 0 1px 0 0 #ffa000 !important;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #000;
+        }
+
+        /* label focus color for Password field*/
+        .input-field input[type=password]:focus + label {
+            color: #ffa000 !important;
+        }
+        /* label underline focus color for PW field */
+        .input-field input[type=password]:focus {
+            border-bottom: 1px solid #ffa000 !important;
+            box-shadow: 0 1px 0 0 #ffa000 !important;
+        }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h5><a href="index.html">AutoConscience</a></h5> 
+        </header>>
+        <section class="rightContent">
+                <p class="amber-text text-darken-2" id="registrationHeader">Create your account</p>
+                <p id="regSubeader">Learn your Driver Score and earn rewards!</p>
+                <div id="inputContainer">
+    
+                <div class="input-field">
+                <input type ="text" id="inputTextUsername">
+                <label for="inputTextUsername">Username</label>
+                </div>
+    
+                <div class="input-field">
+                <input type ="password" id="inputTextPassword">
+                <label for="inputTextPassword">Password</label>
+                </div>
+    
+                <div class="input-field">
+                <input type ="password" id="inputTextConfirmPassword">
+                <label for="inputTextConfirmPassword">Confirm Password</label>
+                </div>
+    
+                <div class="input-field">
+                <input id="inputTextEmail" type="email" class="validate">
+                <label for="inputTextEmail" data-error="Invalid Email" data-success="Valid!">Email</label>
+                </div>
+    
+                <div class="input-field">
+                <input type ="text" id="inputTextName">
+                <label for="inputTextName">Name</label>
+                </div>
+    
+                <div class="input-field">
+                <input type ="text" id="inputTextLicensePlate">
+                <label for="inputTextLicensePlate">License Plate (Optional)</label>
+                </div>
+                </div>
+                <div id="buttonContainer">
+                <a  id="registerButton" class="waves-effect waves-light btn amber darken-2 "style="width: 82%; text-transform: none; margin: 5px 0">Register</a>
+                <br/>
+            
+            </div>
+          
+        <div id="repBtn">
+            <a data-activates="slide-out" id="reportVehicleButton" class="button-collapse pulse waves-effect waves-light btn-large btn-floating" ><i class="large material-icons">directions_car</i></a>
+
+            <!-- Tap Target Structure -->
+            <div class="tap-target" data-activates="reportVehicleButton">
+              <div class="tap-target-content">
+                <h5>Report a Vehicle</h5>
+                <p>Click this button anytime to report drivers on the road!</p>
+              </div>
+            </div>
+        </div>        
+        </section>
+
+        <section class="main-section"> 
+                <ul id="slide-out" class="side-nav left-align">  
+                        <li id="bladeInputFieldContainer">
+                            <div class="input-field" id="bladeInputField">
+                                <input type ="text" id="inputReportLicense">
+                                <label for="inputReportLicense">Enter License Plate</label>
+                            </div>
+                        </li>
+                        <li><div class="subheader" id="goodDriverText">For Good Driving</div></li>
+                        <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Used Turn Signal</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Allowed Lane Merge</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Respected Right of Way</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Patient Driver</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Nice Car</a></li>
+        
+                        <li><div class="subheader" id="badDriverText">For Bad Driving</div></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect slideout2btn" href="#!">Did not Signal</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lacks Driving IQ</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lane Hogging</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Illegal/Wrong Parking</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Improper Pick-up/Drop-off</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Blocked Intersection</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Smoke Belching</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Counterflow</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Ran a Red Light</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Slow in a Fast Lane</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Horn and Light Abuse</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Dangerous Driver</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Refused Passenger</a></li>
+                        <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Charged Wrong Fare</a></li>
+                    </ul>
+
+            <div class="left-align businessPage">
+                <h4>AutoConscience <span>for business</span></h4>
+                <ul class="businessList">
+                    <li>Afraid that your driver is reckless when you're not watching? Worried about the safety of your loved ones if you're not in the driver's seat?</li>
+                    <li>With AutoConscience you can use the crowd to ensure your drivers are behaving properly.</li>
+                    <li>How does it work?<br/>Register below and we'll send you a free magnet which tells people you are enrolled with AutoConscience.</li>
+                    <li>Place this magnet at the rear of your car.</li>
+                    <li>People will see the magnet and report any bad (and good) driving behavior. We have already received hundreds of reports on hundreds of vehicles.</li>
+                    <li>You can view all of the reports in real time.</li>
+                </ul>
+            
+                <h4>Benefits <span>of enrolling with AutoConscience</span></h4>
+                <ol>
+                    <li class="benefit">Your driver will know he's being watched and will drive more safely.</li>
+                    <li class="benefit">You have real time, unbiased reports on how well your driver is treating your vehicle.</li>
+                    <li class="benefit">All reports are confidential and sent directly to you. No one else sees them.</li>
+                    <li class="benefit">An impartial and crowd sourced method of evaluating driver performance</li>
+                    <li class="benefit">If your car receives the most number of good driving reports in a given month you will win free gasoline.</li>
+                </ol>
+                <p>Registration with AutoConscience is absolutely free. You can enroll as many vehicles as you need.</p>
+            </div>
+               
+            </div>
+        </section>
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./js/slick.js"></script>
+        <script type="text/javascript" src="./js/materialize.min.js"></script>
+        <script type="text/javascript" src="./js/azure-mobile-apps-client.2.0.1.min.js"></script>
+        <script type="text/javascript" src="./js/businessPage.js"></script>
+
+    </body>
+</html>

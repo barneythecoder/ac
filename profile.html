@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            /* label color */
+            .input-field label {
+                color: rgb(66, 66, 66)!important;
+            }
+            /* label focus color */
+            .input-field input[type=text]:focus + label {
+                color: #ffa000 !important;
+            }
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #ffa000 !important;
+                box-shadow: 0 1px 0 0 #ffa000 !important;
+            }
+            /* label focus color */
+            .input-field input[type=email]:focus + label {
+            color: #ffa000 !important;
+            }
+            /* label underline focus color */
+            .input-field input[type=email]:focus {
+                border-bottom: 1px solid #ffa000 !important;
+                box-shadow: 0 1px 0 0 #ffa000 !important;
+            }
+            /* valid color */
+            .input-field input[type=text].valid {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+            /* invalid color */
+            .input-field input[type=text].invalid {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+            /* icon prefix focus color */
+            .input-field .prefix.active {
+                color: #000;
+            }
+
+            /* label focus color for Password field*/
+            .input-field input[type=password]:focus + label {
+                color: #ffa000 !important;
+            }
+            /* label underline focus color for PW field */
+            .input-field input[type=password]:focus {
+                border-bottom: 1px solid #ffa000 !important;
+                box-shadow: 0 1px 0 0 #ffa000 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="z-depth-1">
+            <h5><a href="index.html">AutoConscience</a></h5> 
+        </header>
+
+        <section>
+            <ul id="statsFixedNav" class="sidenav statsFixedNav sidenav-fixed">
+                    <li><div class="numberCircle" id="profileDisplayImage"><img class="circle responsive-img" src="./img/ferrari_enzo.png"></div></li>
+                    <li><div class="numberCircle" id="profileDriverScore">00</div></li>
+                    <li><div class="numberCircle" id="profileGoodScore">00</div></li>
+                    <li><div class="numberCircle" id="profileBadScore">00</div></li>
+                    <li><div class="numberCircle" id="profileDisplayImage"><img class="circle responsive-img" src="./img/ferrari_enzo.png"></div></li>
+            </ul>
+            <a href="#" data-target="statsFixedNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+            <ul id="profileStatsNav" class="sidenav profileStatsNav z-depth-2">
+                <li>
+                    <div class="user-view">
+                        <img class="circle" id="profileStatDP" src="./img/ferrari_enzo.png">
+                        <span id="statsNavUsername" class="white-text name">USER</span>
+                        <span id ="statsNavLicensePlate" class="white-text email">ABC 123</span>
+                    </div>
+                </li>
+                <li>
+                    <div id="statsBars">
+                        <div class="numberCircle-lg statsDriverScore" id="profileDriverScore">00</div>
+                        <div class="numberCircle-lg statsDriverScore" id="profileGoodScore">00</div>
+                        <div class="numberCircle-lg statsDriverScore" id="profileBadScore">00</div>
+                    </div>           
+                </li>
+                <li>
+                    <div class="statsLabels">
+                        <div>Driver Score</div>
+                        <div>Conscience Points</div>
+                        <div>Vigilance Points</div>
+                    </div>  
+                </li>
+                <li>
+                    <div id="badges">
+                        <div class="see statsLabels">see more...</div>
+                    </div>
+                </li>
+            </ul> 
+            <a href="#" data-activates="profileStatsNav" class="statsNav"><i class="material-icons">menu</i></a>            
+            
+            <ul id="driverScoreNav" class="sidenav driverScoreNav">    
+                <li><h5>Driver Score</h5></li>
+                <li><div class="numberCircle-DS statsDriverScore" id="profileDriverScore-DS">LV. <span id="profileDSLevel">100</span></div></li>
+                <li class="dsnavtext"><p>Total good reports:</p></li>
+                <li class="dsnavtext"><p>Total bad reports:</p></li>
+                <li class="dsnavbar"><div class="numberCircle-lg statsDriverScore " id="profileGoodScore">00</div></li>
+                <li class="dsnavtext"><p>Good drivers reported:</p></li>
+                <li class="dsnavbar"><div class="numberCircle-lg statsDriverScore" id="profileBadScore">00</div></li>
+                <li class="dsnavtext"><p>Bad drivers reported:</p></li>
+            </ul>
+            <a href="#" data-activates="driverScoreNav" class="dsNav"><i class="material-icons">menu</i></a> 
+            
+            <ul id="userBadgesNav" class="sidenav userBadgesNav">    
+                <li><h5>Badges</h5></li>
+                <li id="badgeName"><label>Badge Name</label></li>
+                <hr>
+                <li class="statsLabels"><p>description about the badge </p></li>
+                
+            </ul>
+            <a href="#" data-activates="userBadgesNav" class="badgesNav"><i class="material-icons">menu</i></a> 
+            
+            <ul id="slide-out" class="sidenav reportSideNav">  
+                    <li id="bladeInputFieldContainer">
+                        <div class="input-field" id="bladeInputField">
+                            <input type ="text" id="inputReportLicense">
+                            <label for="inputReportLicense">Enter License Plate</label>
+                        </div>
+                    </li>
+                    <li><div class="subheader" id="goodDriverText">For Good Driving</div></li>
+                    <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Used Turn Signal</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Allowed Lane Merge</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Respected Right of Way</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Patient Driver</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="GOOD" class="waves-effect" href="#!">Nice Car</a></li>
+    
+                    <li><div class="subheader" id="badDriverText">For Bad Driving</div></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect slideout2btn" href="#!">Did not Signal</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lacks Driving IQ</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Lane Hogging</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Illegal/Wrong Parking</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Improper Pick-up/Drop-off</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Blocked Intersection</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Smoke Belching</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Counterflow</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Ran a Red Light</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Slow in a Fast Lane</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Horn and Light Abuse</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">Dangerous Driver</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Refused Passenger</a></li>
+                    <li><a onclick="reportButtonClick(this)" id="BAD" class="waves-effect" href="#!">PUV Charged Wrong Fare</a></li>
+            </ul>
+
+            <div class="mainContent left">
+                
+                <!-- <div class="reportingSection"> 
+                    <p style="margin: 0 0 -20px 0">Report a vehicle <span><i class="tiny material-icons">help_outline</i></span></p>
+                    <div class="left">
+                        <p id="licensePlateText">License Plate:</p>
+                    </div>
+
+                    <div class="right">
+                        <div class="LicensePlateInput">
+                            <div class="input-field" id="bladeInputField">
+                                <input type="text" placeholder="ABC 1234" id="reportLicensePlateField">
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="activity">
+                       
+                </div> -->
+            </div>
+            <div class="rightContent right">
+                <div id="repBtn">
+                    <a data-activates="slide-out" id="reportVehicleButton" class="button-collapse pulse waves-effect waves-light btn-large btn-floating" ><i class="large material-icons">directions_car</i></a>
+        
+                    <!-- Tap Target Structure -->
+                    <div class="tap-target" data-activates="reportVehicleButton">
+                        <div class="tap-target-content">
+                        <h5>Report a Vehicle</h5>
+                        <p>Click this button anytime to report drivers on the road!</p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </section>
+        
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
+        <script type="text/javascript" src="./js/profile.js"></script>
+
+    </body>
+</html>

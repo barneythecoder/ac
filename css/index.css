@@ -1,0 +1,454 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    font-family: akrobat;
+  }
+.featureShowcase a{
+    text-decoration: none!important;
+    color: rgb(20, 20, 20)!important;
+}
+body{
+    height: 100vh; 
+    position: relative;  
+    background: linear-gradient(to bottom, #e9f0f5, #d2dae0);
+    /* background:  #e9f0f5; */
+    overflow: hidden;
+}
+body>header{
+    width: 100%;
+    height: 60px;
+    background: url("../img/Logo3.png") -80px -50px #e9f0f5  no-repeat;
+    background-size: 215px;
+    position: fixed;
+    box-shadow: 2px 2px 4px #969696;
+}
+h1, h2, h3, h4, h5{
+    color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+header>h5 a{
+    font-family: coolveticaregular;
+    color: #2c3e50;
+}
+header>h5 {
+    text-align: left;
+    padding-left: 145px;
+    padding-top: 13px;
+    font-family: coolveticaregular;
+    color: #2c3e50;
+    float: left;
+}
+.headerContent{
+    display:block; 
+    text-align:center; 
+    padding: 10px 0;
+    margin:15px 20px 13px 20px;
+}
+.headerContent div.progressBar{
+    width:80%!important;
+}
+.headerContent h6{
+    margin:-10px 0 0 0;
+}
+.headerText{
+    display:inline-block;
+    color: #2c3e50; 
+    font-family: akrobatbold;
+    font-size: 25px;
+
+}
+.main-section{
+    float: left;
+    width:70%;
+    height: 100vh;
+    padding: 95px 45px 75px 45px;
+    text-align: center;
+}
+.top{
+    margin-top: 60px;
+}
+
+footer{
+    width: 100%;
+    height: 25vh;
+    background-color:  #e9f0f5!important;
+    position: fixed;
+    bottom:0;
+}
+.reportButtonContainer{
+    width: 100%;
+    text-align: center;
+    margin: 120px 0 25px 0;
+}
+.slickCarousel>div{
+    text-align: center;
+}
+
+.input-field {
+    color: #ffa000;
+    margin-top:-5px!important;
+    line-height: 40px;
+}
+/********************************************************************************
+    RIGHT CONTENT - REGISTRATION AND LOGIN
+********************************************************************************/
+.rightContent{
+    /* float: right;
+    width:30%;
+    margin-top:70px;
+    height: 100vh; */
+
+    float: right;
+    width: 25%;
+    margin: 95px 45px 0 0;
+    height: 100vh;
+}
+#inputContainer
+{
+    margin: 0 60px 0 0;
+}
+#registrationHeader{
+    font-size: 36px;
+    height: 3.1rem;
+    font-family: 'akrobatregular';
+}
+
+#inputTextUsername, #inputTextEmail, #inputTextName, #inputTextLicensePlate
+{
+    font-size: 25px;
+}
+.progressBar h4{
+    margin: 20px 0 -8px 0;
+    padding: 3px 0 0 8px;
+    color: #3e4c70;
+}
+#regSubeader{
+    margin: -3px 0 22px 4px;
+    font-size: 13px;
+}
+.progressBar p{
+    color: #3e4c70;
+}
+#communityGoalsProgressText{
+    text-align: right; float: right; font-size: 20px;
+}
+.slickCarousel{ 
+    width: 60%;
+    height: 40%;
+}
+
+#reportVehicleButton
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.tap-target{
+    background-color: #26a69a!important;
+    color: white!important;
+    font-size: 25px!important;
+}
+.tap-target h5{
+    font-size: 2.8rem;
+}
+.drag-target{
+    display:none;
+}
+
+/********************************************************************************
+    PANEL 1
+********************************************************************************/
+p#panelText{
+    font-family: bebasneue;
+    font-size: 39px!important;
+    color: #3e4c70;
+}
+
+div#panel1 img{
+    margin-top: 25px;
+    width: 40%;
+}
+
+
+/********************************************************************************
+    END OF PANEL 1
+********************************************************************************/
+
+/********************************************************************************
+   BLADE - REPORT FIELD
+********************************************************************************/
+li#bladeInputFieldContainer{
+    margin-top: 20px;
+}
+div#bladeInputField{
+    width: 80%;
+}
+
+#inputReportLicense{
+    text-transform: uppercase!important;
+    font-size: 30px;
+    padding-top: 10px
+}
+
+ul li div.subheader{
+    padding: 0 0 0 17px;
+}
+
+#goodDriverText{
+    color:#02a0ff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#badDriverText{
+    color:#f43e3e;
+    font-weight: 600;
+    font-size: 17px;
+}
+/********************************************************************************
+   END OF BLADE - REPORT FIELD
+********************************************************************************/
+
+#inputTextLicensePlate{
+    text-transform: uppercase!important;
+}
+
+
+/********************************************************************************
+   FEATURES SECTION
+********************************************************************************/
+.featureShowcase{
+    width:90%;
+}
+.row{
+    margin-bottom: 15px !important;
+}
+
+.page-footer{
+    display: block;
+    width: 100%;
+    padding:0!important;
+    background:  #f3f6f8;
+}
+
+.footerContent{
+    display: inline-block;
+    width: 24%;
+    padding:20px!important;
+    text-align: center;
+}
+
+.featureText{
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    line-height: 13px;
+}
+
+.featureTitle{
+    font-size: 18px;
+    font-family: akrobatbold;
+}
+
+.footerContent p, h5{
+    color: #373737;
+}
+
+.footerContent h5{
+    font-family: akrobatbold;
+}
+
+
+/********************************************************************************
+    BUSINESS PAGE &  COMMUNITY PAGE
+********************************************************************************/
+
+.businessPage{
+    margin: 0 60px;
+}
+
+.businessPage ul{
+    width: 90%;
+    padding: 0 60px 0 0px!important;
+    
+}
+
+.businessPage  li, .businessPage p{
+    color: #3e4c70;
+    margin: 18px 0;
+    line-height: 16px;
+}
+
+.businessPage h4{
+    color: #2c3e50;
+    font-family: coolveticaregular;
+}
+.benefit{
+    list-style-type: lower-alpha;
+}
+
+/********************************************************************************
+ LOGIN PAGE
+********************************************************************************/
+
+.loginPage{
+    width:30%;
+    height: 100vh;
+    padding: 17.58% 2.5%;
+    text-align: center;
+    position: relative;
+}
+.loginContainer{
+    margin: 30px 0 5px 0;
+}
+
+
+/********************************************************************************
+ MQ
+********************************************************************************/
+@media screen 
+  and (min-width: 1200px) 
+  and (max-width: 1399px)   { 
+/***************
+    PANEL 1
+****************/
+    p#panelText{
+        font-family: bebasneue;
+        font-size: 30px!important;
+        color: #3e4c70;
+    }
+
+    div#panel1 img{
+        margin-top: 25px;
+        width: 30%;
+    }
+    /*Community Goals*/
+
+    .headerText{
+        font-size: 19px;
+    }
+    .progressBar p{
+        font-size: 11px;
+        font-family: akrobatlight; 
+    }
+    .headerContent div.progressBar{
+        width:70%!important;
+    }
+
+    /*Showcase*/
+    .featureShowcase{
+        width:70%;
+    }
+  /*   .row{
+        margin-bottom: 0!important;
+    } */
+    
+    .featureText{
+        font-size: 10px;
+        font-family: akrobatlight;
+        margin-bottom: 10px;
+        padding: 0 30px;
+        line-height: 10px;
+    }
+    
+    .featureTitle{
+        font-size: 15px;
+    }
+    #communityGoalsProgressText{
+        font-size: 13px;
+    }
+    #registrationHeader{
+        font-size: 28px;
+        height: 2.1rem;
+        font-family: 'akrobatregular';
+    }
+    #inputContainer
+    {
+        margin: 0 95px 0 0;
+    }
+
+    #inputTextUsername, #inputTextEmail, 
+    #inputTextName, #inputTextLicensePlate
+    {
+        font-size: 12px;
+    }
+    input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), 
+    input[type="email"]:not(.browser-default){
+        margin: 0 0 1px 0!important;
+    }
+}
+
+@media screen 
+  and (min-width: 1400px) 
+  and (max-width: 1600px)   { 
+/***************
+    PANEL 1
+****************/
+    p#panelText{
+        font-family: bebasneue;
+        font-size: 35px!important;
+        color: #3e4c70;
+    }
+
+    div#panel1 img{
+        margin-top: 30px;
+        width: 35%;
+    }
+    /*Community Goals*/
+
+    .headerText{
+        font-size: 22px;
+    }
+    .progressBar p{
+        font-size: 15px;
+        font-family: akrobatlight; 
+    }
+    .headerContent div.progressBar{
+        width:75%!important;
+    }
+
+    /*Showcase*/
+    .featureShowcase{
+        width:75%;
+    }
+  /*   .row{
+        margin-bottom: 0!important;
+    } */
+    
+    .featureText{
+        font-size: 13px;
+        font-family: akrobatlight;
+        margin-bottom: 13px;
+        padding: 0 30px;
+        line-height: 10px;
+    }
+    
+    .featureTitle{
+        font-size: 15px;
+    }
+    #communityGoalsProgressText{
+        font-size: 13px;
+    }
+    #registrationHeader{
+        font-size: 32px;
+        height: 2.8rem;
+        font-family: 'akrobatregular';
+    }
+    #inputContainer
+    {
+        margin: 0 95px 0 0;
+    }
+
+    #inputTextUsername, #inputTextEmail, 
+    #inputTextName, #inputTextLicensePlate
+    {
+        font-size: 15px;
+    }
+    input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), 
+    input[type="email"]:not(.browser-default){
+        margin: 0 0 10px 0!important;
+    }
+}
+

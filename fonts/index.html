@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<script type="text/javascript">
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+	{
+		window.location.replace('mobileSite.html');
+	}
+	</script>
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-107910863-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+	<link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="32x32" />
+	<title>AutoConscience | Be The Conscience of Traffic</title>
+  <link href="./css/stylesIndex.css" rel="stylesheet">
+  <link href="./css/formoid.css" rel="stylesheet">
+  <link href="./css/fonts.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '160376924696978');
+    fbq('track', 'PageView');
+  </script><noscript><img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=160376924696978&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107910863-1"></script>
+	<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107910863-1');
+  </script>
+
+  <script src="https://zumo.blob.core.windows.net/sdk/azure-mobile-apps-client.min.js"></script>    
+  <script src="./js/ind.js"></script>
+  <script>
+    $('form').submit(function(){    
+      if ($('input#website').val().length != 0) {
+          return false;
+      } 
+    });
+  </script>	  	   
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  </head>
+  
+	<body>
+    <div id="fullpage">
+      <!--- LANDING PAGE/PANEL 1 -->
+      <section>
+        <div class="container">
+          <div class="text-vertical-center">
+            <h1 id="tagline">Be the conscience of traffic</h1>
+            <h2 id="user-scroll">Scroll down to find out more</h2>
+            <a href="https://play.google.com/store/apps/details?id=com.bbb.autoconscience&hl=en">
+              <img id="android-app-download" src="./img/android-app-download.png">
+            </a>
+            <img id="logo" src="./img/logov2.png" alt="">
+          </div>
+          <div class="action_btns">
+            <div class="one_half icon_title"><a href="#" id="login_form" class="btn">Login</a></div>
+            <div class="one_half icon_title"><a id="register_form" class="btn">Register</a></div>
+          </div>
+          <div class="report_ui">
+            <p>Report a Vehicle</p>
+            <input type="text" placeholder="Enter License Plate" id="reportLicensePlateField">
+            <div class="website_report good_report">
+              <a href="#" id="good_report_logo_btn">
+                <img id="report_logo_btn_image" src="./img/good-report-logo.png">
+                <span id="report_text">for good driving</span>
+              </a>
+            </div>
+            <div class="website_report bad_report">
+              <a href="#" id="bad_report_logo_btn" >
+                <img id="report_logo_btn_image" src="./img/bad-report-logo.png">
+                <span id="report_text">for bad driving</span>
+              </a>
+            </div>
+          </div>
+          <div class="community-goals-section">
+              <p id="community-goals-title">Community Goals </p>
+              <p id="community-goals-text">Every report adds one point to the community goal. Once the goal is reached<span id="registeredUsers" style="color:rgb(166, 71, 243); cursor:pointer;"> 3 registered users</span>  will each receive PHP500 worth of gasoline. Keep reporting!</p>
+              <p id="community-goals-number"><span id="community-goals-progress">0</span> / 500</p>
+              <div class="community-bar" role="progressbar">
+                  <div class="community-bar-progress" id="progress" >
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+          <form class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post"><div class="title"><h2>Register</h2></div>
+            <div class="element-input"><label class="title"><span class="required">*</span></label><input class="large" type="text" name="input" required="required" placeholder="Username" id="inputTextUsername"/></div>
+            <div class="element-input"><label class="title"><span class="required">*</span></label><input class="large" type="text" name="input1" required="required" placeholder="Email Address"id="inputTextEmail"/></div>
+            <div class="element-password"><label class="title"><span class="required">*</span></label><input class="large" type="password" name="password" value="" required="required" placeholder="Password"id="inputTextPassword"/></div>
+            <div class="element-password"><label class="title"></label><input class="large" type="password" name="password1" value=""required="required" placeholder="Confirm Password" id="inputTextConfirmPassword"/></div>
+            <div class="element-input"><label class="title"></label><input class="large" type="text" name="input3" required="required" placeholder="First Name" id="inputTextFirstName"/></div>
+            <div class="element-input"><label class="title"></label><input class="large" type="text" name="input2" required="required" placeholder="Last Name" id="inputTextLastName"/></div>	
+            <div class="element-input"><label class="title"><span class="required">*</span></label><input class="large" type="text" name="input5" placeholder="Country" id="inputTextCountry"/></div>
+            <div class="element-input"><label class="title"></label><input class="large" type="text" name="input4" placeholder="Your License Plate (Optional)" id="inputTextLicensePlate"/></div>
+            <div class="element-input"><input id="website" name="website" type="text" value=""  /></div>
+            <div class="g-recaptcha" data-sitekey="6LeyUTQUAAAAAMqoXA2qF5FqLQ4bx4CQXrGWLg6t" data-callback="correctCaptcha"></div>
+            <div class="element-separator"><hr><h3 class="section-break-title"></h3></div>
+            <div class="submit">
+              <input type="button" value="Cancel" id="cancelBtn"/>
+              <input type="button" value="Submit" id="submitBtn"/> 		
+            </div>
+          </form>
+        </div>
+			
+			  <div class="form-container5" id="LoginForm">
+          <form class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post"><div class="title"><h2>Login</h2></div>
+            <div class="element-input"><label class="title"></label><input class="large" type="text" name="input" required="required" placeholder="Username" id="inputTextLoginUsername"/></div>        
+            <div class="element-password"><label class="title"></label><input class="large" type="password" name="password" value="" required="required" placeholder="Password"id="inputTextLoginPassword"/></div>
+                       
+            <div class="element-separator"><hr><h3 class="section-break-title"></h3></div>
+            <div class="submit">
+              <input type="button" value="Cancel" id="cancelLoginBtn"/>
+              <input type="button" value="Login" id="LoginBtn"/> 		
+            </div>
+          </form>
+        </div>
+			
+        <div class="form-container2">
+          <form class="formoid-biz-blue" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
+            <div class="title">
+              <h2>Report</h2> 
+              <span>	
+                <i class="window-close" id="report-form-close" aria-hidden="true">
+                  <img src="./img/close-window.png">
+                </i>
+              </span> 
+            </div>										
+            <div class="submit" id="good-reports-list">				
+              <input type="button" value="Used turn signal" onclick="reportButtonClick(this)" id="GOOD"/>
+              <input type="button" value="Allowed me to shift lane" onclick="reportButtonClick(this)"  id="GOOD"/>
+              <input type="button" value="Kept intersection open" onclick="reportButtonClick(this)"  id="GOOD"/>
+              <input type="button" value="Followed right of way" onclick="reportButtonClick(this)"  id="GOOD"/>
+              <input type="button" value="Patient Driver" onclick="reportButtonClick(this)"  id="GOOD"/>
+              <input type="button" value="Defensive Driver" onclick="reportButtonClick(this)" id="GOOD"/>
+              <input type="button" value="Nice car" onclick="reportButtonClick(this)" id="GOOD"/>
+            </div>  
+          </form>
+        </div>
+			
+        <div class="form-container3">
+          <form class="formoid-biz-blue" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post">
+            <div class="title">
+              <h2>Report</h2> 
+              <span>	
+                <i class="window-close" id="report-form-close2" aria-hidden="true">
+                  <img src="./img/close-window.png">
+                </i>
+              </span> 
+            </div>	
+
+            <div class="submit" id="good-reports-list" style="overflow-y:scroll; height:400px;">	
+              <input type="button" value="Did not signal" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Lane Hogging" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Illegal/wrong parking" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Improper pick-up/drop-off" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Blocked Intersection" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Smoke Belching" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Counterflow" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Ran a Red Light" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Slow in a Fast Lane" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Horn and Light Abuse" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="Dangerous Driver" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="PUV Refused Passenger" onclick="reportButtonClick(this)" id="BAD"/>
+              <input type="button" value="PUV Charged Wrong Fare" onclick="reportButtonClick(this)" id="BAD"/>
+            </div>
+          </form>
+        </div>
+    
+        <div class="popup">
+          <div class="popup-content" >
+            <div class="popup-text">
+              <p id="message">Every report adds one point to the community goal. Once the goal is reached 3 registered users will each receive PHP500 worth of gasoline. Keep reporting!</p>
+              <p id="popup-para">Each report adds to the community score which results in a community goal. A lot of the goals are our way of saying thank you to our users (eg. free gas for 10 registered users)!</p>
+            </div>
+          </div>
+          <div class = "kaartehanNiRocky"></div>
+        </div>
+      </section>
+
+      <!--- PANEL TWO -->
+      <section>
+        <div class="container">
+          <div class="content1">
+            <div class="panel-one">
+              <p class="door">When you do<br/> something<br/> for someone <br/>they say...<br/> </p>
+              <img id="door" src="img/image-one.png" alt="guy-holding-door">
+          </div>
+          </div>
+          <div class="content2">
+            <div class="panel-one">
+              <img id="car-merging" src="img/image-two.png" alt="car-letting-someone-merge">
+              <p class="car">But that<br/> doesn't happen<br/> on the road.</p>
+              <p class="car-two">let someone into your lane,<br/> no thanks given </p>
+            </div>
+          </div>
+          <div class="content3">
+            <div class="panel-three">
+              <p id="para-three">You can help upgrade drivers!</p>
+              <img id="phone-report" src="./img/phone-logo-reports.png" alt="">
+              <p id="para-three-two">Let's show we care<br>about how the <br> road is shared </p>
+            </div>    
+          </div>
+        </div>
+      </section>
+
+      <!--- PANEL THREE -->
+      <section>
+        <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+          <source src="./img/618511023.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="content-panel-two">
+                <div class="panel-two">
+                  <p id="traffic">Driving seems to reward the<br/><span style="color:#ed1c24; font-family:'akrobatregular'">AGGRESSIVE</span> and the <span style="color:#ed1c24; font-family: 'akrobatregular'">UNDISCIPLINED</span> </p>
+                  <img src="./img/vehicles.png" alt="">
+                  <p id="traffic-two"> Bad drivers simply don't care about others around them</p>
+                </div>
+              </div>
+        </div>
+      </section>
+
+      <!--- PANEL FOUR -->
+      <section>
+        <div class="container">
+          <p id="panel-eight-download">Features</p>
+              <div class="panel-eight-list">
+
+                <div class="feature1">
+                  <li>Easily report drivers</li>
+                  <p id="panel-eight-lists-p">Report good and bad driver behaviour when you see one. Your reports are saved
+                      in the cloud and are immediately linked to the license plate you have entered. Strict
+                      filtering algorithms verify and give weight to reports you submit  
+                  </p>
+                  <img src="./img/screenshot-four.png" id="feature1-img">
+                </div>
+                
+                <div class="feature2">
+                <li>Create your own personal account</li>
+                <p id="panel-eight-lists-p">Register and create your profile in AutoConscience. Link your license plate and see what
+                  your fellow drivers think of your driving!
+                </p>
+                <img src="./img/screenshot-two.png" id="feature2-img">
+                </div>
+                
+                <div class="feature3">
+                <li>Level up and earn rewards</li>
+                <p id="panel-eight-lists-p">Level-up as you drive! You gain levels and other rewards as you receive reports for your
+                  good driving. Stats are tracked and saved in our servers to tell you what kind of a driver you
+                  are
+                </p>
+                <img src="./img/screenshot-three.png" id="feature3-img">
+                </div>
+                
+                <div class="feature4">
+                <li>Make it personal! </li>
+                <p id="panel-eight-lists-p">Decorate your reports with fun stickers to truly express your gratitude (or anger) to the other
+                  driver. Driver let you in his lane? Send a thank you note. Another driver didn’t use turning signals?
+                  Send him poop (sticker, not an actual one)
+                </p>
+                <img src="./img/screenshot-one.png" id="feature4-img"  >
+                </div>
+          </div> 
+        </div>
+      </section>
+
+      <!--- PANEL FIVE -->
+      <section>
+        <div class="container">
+          <div class="content-panel-four">
+            <div class="panel-four">
+              <img id="good-car" src="./img/good-reporting.png" alt="">    
+              <p id="para-one">Say thanks for good <br/> driving behaviour</p>
+              <p id="para-two">And encourage better drivers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--- PANEL SIX -->
+      <section>
+        <div class="container">
+          <div class="content-panel-five">
+            <div class="left-panel-five">
+              <p>Report bad <br/> drivers</p>
+              <img id="bad-report" src="./img/bad-reporting.png" alt="">
+            </div>
+            <div class="right-panel-five">
+              <p id="para-five"> Let them know their actions <br/> have consequences</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--- PANEL SEVEN -->
+      <section> 
+        <div class="container">
+          <div class="panel-nine-topContent">
+            <p>Meet the Team</p>
+          </div>
+
+          <div class="panel-nine-leftContent">
+            <div id="circle">
+              <img id="anton" src="./img/anton.png">  
+            </div>
+            <div class="box">
+              <p id="team-name">Anton Conejos</p>
+              <p id="team-title">Chief Noncoder, Booze Connoisseur</p>
+            </div>
+          </div>
+        
+          <div class="panel-nine-middleContent">
+            <div id="circle">
+              <img id="rocky" src="./img/rocky.png">  
+            </div>
+            <div class="box">
+              <p id="team-name">Rocky Ismael</p>
+              <p id="team-title">Coder, In-house Genius, Chronic Procrastinator</p>
+            </div>
+          </div>
+                  
+          <div class="panel-nine-rightContent">
+            <div id="circle">
+              <img id="ren" src="./img/ren.png">  
+            </div>
+            <div class="box">
+              <p id="team-name">Ren Bernabe</p>
+              <p id="team-title">Magician, Professional Googler</p>
+            </div>
+          </div>  
+
+        </div>
+      </section>
+		  
+    </div>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script> 
+    <script type="text/javascript" src='./js/jquery.fullpage.js'></script> 
+    <script type="text/javascript">		
+      $('#fullpage').fullpage({
+      navigation:true,
+      hybrid:true
+      });
+      console.log( "pass" );
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    font-family: akrobat;
+  }
+.featureShowcase a{
+    text-decoration: none!important;
+    color: rgb(20, 20, 20)!important;
+}
+body{
+    height: 100vh; 
+    position: relative;  
+    background: url("../img/trupeBG.png") 50% 550px #e9f0f5  no-repeat;
+    /* background: linear-gradient(to bottom, #e9f0f5, #d2dae0); */
+    /* background:  #e9f0f5; */
+    overflow-x: hidden;
+}
+body>header{
+    width: 100%;
+    height: 60px;
+    background: url("../img/Logo3.png") -80px -50px #e9f0f5  no-repeat;
+    background-size: 215px;
+    position: fixed;
+    box-shadow: 2px 2px 4px #969696;
+    z-index: 1;
+}
+h1, h2, h3, h4, h5{
+    color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+
+
+header>h5 a{
+    text-align: left;
+    padding-left: 145px;
+    padding-top: 13px;
+    font-family: coolvetica;
+    color: #2c3e50;
+
+}
+
+.headerContent{
+    display:block; 
+    text-align:center; 
+    padding: 10px 0;
+    margin:15px 20px 13px 20px;
+}
+.headerContent h6{
+    margin:-10px 0 0 0;
+}
+.headerText{
+    display:inline-block;
+    color: #2c3e50; 
+    font-family: akrobatbold;
+    font-size: 25px;
+
+}
+.main-section{
+    float: left;
+    width:70%;
+    height: 100vh;
+    padding: 95px 45px 75px 45px;
+    text-align: center;
+}
+
+.reportButtonContainer{
+    width: 100%;
+    text-align: center;
+    margin: 120px 0 25px 0;
+}
+.slickCarousel>div{
+    text-align: center;
+}
+
+.input-field {
+    color: #ffa000;
+    margin-top:-5px!important;
+    line-height: 40px;
+}
+/********************************************************************************
+    RIGHT CONTENT - REGISTRATION AND LOGIN
+********************************************************************************/
+.rightContent{
+    /* float: right;
+    width:30%;
+    margin-top:70px;
+    height: 100vh; */
+
+    float: right;
+    width: 25%;
+    margin: 95px 45px 0 0;
+    height: 100vh;
+}
+#inputContainer
+{
+    margin: 0 60px 0 0;
+}
+#registrationHeader{
+    /*color: #f7941d;*/
+    font-size: 36px;
+    height: 3.1rem;
+    font-family: 'akrobatregular';
+}
+#buttonContainer
+{
+   
+}
+#inputTextUsername, #inputTextEmail, #inputTextName, #inputTextLicensePlate
+{
+    font-size: 25px;
+}
+.progressBar h4{
+    margin: 20px 0 -8px 0;
+    padding: 3px 0 0 8px;
+    color: #3e4c70;
+}
+#regSubeader{
+    margin: -3px 0 22px 4px;
+    font-size: 13px;
+}
+.progressBar p{
+    color: #3e4c70;
+}
+.slickCarousel{ 
+    width: 60%;
+    height: 40%;
+}
+
+#reportVehicleButton
+{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.tap-target{
+    background-color: #26a69a!important;
+    color: white!important;
+    font-size: 25px!important;
+}
+.tap-target h5{
+    font-size: 2.8rem;
+}
+.drag-target{
+    display:none;
+}
+
+
+/********************************************************************************
+   BLADE - REPORT FIELD
+********************************************************************************/
+li#bladeInputFieldContainer{
+    margin-top: 20px;
+}
+div#bladeInputField{
+    width: 80%;
+}
+
+#inputReportLicense{
+    text-transform: uppercase!important;
+    font-size: 30px;
+    padding-top: 10px
+}
+
+ul li div.subheader{
+    padding: 0 0 0 17px;
+}
+
+#goodDriverText{
+    color:#02a0ff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#badDriverText{
+    color:#f43e3e;
+    font-weight: 600;
+    font-size: 17px;
+}
+/********************************************************************************
+   END OF BLADE - REPORT FIELD
+********************************************************************************/
+/********************************************************************************
+ MONTHLY WINNER PAGE
+********************************************************************************/
+
+.winnerPage{
+    width: 100%;
+    text-align: center;
+    padding: 80px 0 0 0;
+}
+.winnerPage p{
+    width: 30%;
+    padding:10px 0;
+    font-size: 17px;
+}
+.itim{
+    color:#000;
+}
+.banner{
+    background-color: #e9b258;
+    width: 70%;
+    height: 5px;
+    display: block;
+}
+
+.winnerPageLicensePlate
+{  
+ font-weight: 700; 
+}
+
+/* .hexagon-in1, .hexagon-in1:before, .hexagon-in1:after {
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+} */
+.hexagon-in2, .hexagon-in2:before, .hexagon-in2:after {
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);   
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+}
+.hexagon {
+    overflow: hidden;
+    visibility: show;
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    cursor: pointer;
+    }
+.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(../img/DP.png);
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2 {
+    background-image: url(../img/DP.png);
+    background-size: 255px 253px;
+    }
+
+
+.hexagon2 {
+    width: 217px;
+    height: 255px;
+    margin: 50px auto;
+    }
